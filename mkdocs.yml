@@ -1,1 +1,11 @@
+site_name: testing Wiki
+theme: readthedocs
+nav:
+  - Home: index.md
+  - Section 1:
+      - Page 1: section1/page1.md
+      - Page 2: section1/page2.md
+  - Section 2:
+      - Page 3: section2/page3.md
+      - Page 4: section2/page4.md
 
