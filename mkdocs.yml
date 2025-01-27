@@ -2,8 +2,8 @@
 
 # Basics
 site_name: Consumer Pod Doc
-#site_url: https://pages.git.i.mercedes-benz.com/GSP-platform/gspp-info/
-#repo_url:  https://git.i.mercedes-benz.com/GSP-platform/gspp-info
+#site_url: https://pages
+#repo_url:  https://git.
 edit_uri:  edit/main/docs/
 repo_name: testing
 
@@ -13,7 +13,7 @@ theme:
   name: material
   locale: en
   #If you want disable the Announcement Banner, comment the custom_dir property.
-  custom_dir: overrides
+  #custom_dir: overrides
   palette:  # dark/light mode toggle
     - scheme:  default
       primary: black
@@ -53,7 +53,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      #link: https://git.i.mercedes-benz.com/GSP-platform/gspp-info
+      #link: https://git
 
 validation:
   nav:
@@ -65,7 +65,7 @@ validation:
     unrecognized_links: warn
     anchors: ignore
 
-copyright: '&copy; Deloitte 2025'
+copyright: '&copy; D 2025'
 
 
 # Mkdocs Plugins
