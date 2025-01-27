@@ -16,12 +16,19 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.12'  # Specify the Python version
+        python-version: '3.12'
 
     - name: Install MkDocs and dependencies
       run: |
         pip install mkdocs
-        pip install mkdocs-material  # If you are using the Material theme or any other plugins
+        pip install mkdocs-material
+        pip install mkdocs-awesome-pages-plugin
+        pip install mkdocs-glightbox
+        pip install mkdocs-table-reader-plugin
+        pip install openpyxl
+        pip install mkdocs-video
+        pip install termynal
+        pip install mkdocs-redirects
 
     - name: Build MkDocs site
       run: |
