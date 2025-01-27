@@ -1,11 +1,160 @@
-site_name: testing Wiki
-theme: readthedocs
-nav:
-  - Home: index.md
-  - Section 1:
-      - Page 1: section1/page1.md
-      - Page 2: section1/page2.md
-  - Section 2:
-      - Page 3: section2/page3.md
-      - Page 4: section2/page4.md
+# This is the main configuration file for mkdocs.
 
+# Basics
+site_name: Consumer Pod Doc
+#site_url: https://pages.git.i.mercedes-benz.com/GSP-platform/gspp-info/
+#repo_url:  https://git.i.mercedes-benz.com/GSP-platform/gspp-info
+edit_uri:  edit/main/docs/
+repo_name: testing
+
+
+# Configuration for mkdocs-material
+theme:
+  name: material
+  locale: en
+  #If you want disable the Announcement Banner, comment the custom_dir property.
+  custom_dir: overrides
+  palette:  # dark/light mode toggle
+    - scheme:  default
+      primary: black
+      accent:  indigo
+      toggle:
+        name: Switch to dark mode
+        icon: material/brightness-7
+    - scheme: slate
+      primary: black
+      accent:  indigo
+      toggle:
+        name: Switch to light mode
+        icon: material/brightness-4
+  icon:
+    repo: fontawesome/brands/github
+    logo: simple/deloitte
+  favicon: assets/logos/favicon.ico
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.instant
+    - content.action.edit
+    - content.code.copy
+    - toc.follow
+    #- toc.integrate
+
+# Custom CSS & JS
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/tablesort.min.js
+  - assets/javascripts/mkdocs-tablesort.js
+
+# Footer Formatting
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      #link: https://git.i.mercedes-benz.com/GSP-platform/gspp-info
+
+validation:
+  nav:
+    omitted_files: info
+    not_found: info
+  links:
+    not_found: warn
+    absolute_links: warn
+    unrecognized_links: warn
+    anchors: ignore
+
+copyright: '&copy; Deloitte 2025'
+
+
+# Mkdocs Plugins
+plugins:
+  - search                           # enables full-text-search across the site
+
+  - awesome-pages:                   # allows sorting and renaming nav-menu items
+      strict: false                  # crash in case of errors with the .pages
+      collapse_single_pages: false   # infer nav-title of folder from page-title if only one migration.md in folder
+
+  - blog:
+      blog_dir: news-announcements
+
+  - tags:                             # allows adding tags/labels to pages
+      tags_file: tags.md
+
+  - table-reader                     # add CSV/XLSX files as HTML-table
+
+  - glightbox:                       # allows zooming of embedded images
+      auto_caption: true
+      caption_position: bottom
+      touchNavigation: false
+      skip_classes:
+         - skip-lightbox
+
+  - mkdocstrings:                    # auto-generate documentation from/concerning Python code
+      default_handler: python
+      handlers:
+        python:
+          paths: [src]               # root directory where to look for python code
+          options:
+            show_source: false
+
+  - mkdocs-video
+
+  - termynal
+
+  # Lines starting with hash-tilde are getting uncommented by the GitHub Action:
+
+  #~- git-revision-date-localized:
+  #~    enable_creation_date:   false
+  #~    fallback_to_build_date: true
+
+  #~- spellcheck:
+  #~    backends:
+  #~      - symspellpy
+  #~      - codespell:
+  #~          dictionaries: [clear]
+  #~    ignore_code: yes
+  #~    known_words: known_words.txt
+
+
+# Markdown Extensions
+markdown_extensions:
+  - meta                   # allows managing page metadata
+  - abbr                   # allows creating abbreviations
+  - attr_list              # allows adding HTML/CSS attributes in Markdown
+  - def_list               # allows creating definitions
+  - footnotes              # allows creating footnotes
+  - md_in_html             # allows to create MD-in-HTML-in-MD
+  - tables                 # allows creating tables
+  - admonition             # allows creating callout-blocks
+  - nl2br                  # creates HTML line-break on MD line-break
+  - sane_lists             # more robust lists
+  - smarty                 # beautifies parentheses and dashes
+  - toc:                   # allows creating table-of-contents
+      title: 'Contents'
+      toc_depth: 1-3
+  - pymdownx.highlight:    # code-highlighting for blocks
+      anchor_linenums: true
+  - pymdownx.inlinehilite  # code-highlighting for inline-code
+  - pymdownx.snippets
+  - pymdownx.superfences:  # more robust code blocks
+      custom_fences:
+        - name: mermaid    # generate diagrams from code
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.mark          # format text with ==
+  - pymdownx.tilde         # format text with ~~
+  - pymdownx.caret         # format text with ^^
+  - pymdownx.keys          # allow creating keyboard-icons
+  - pymdownx.details       # allow collapsible sections
+  - pymdownx.smartsymbols  # extends functionality of smarty
+  - pymdownx.magiclink     # automatically creates anchors for hyperlinks
+  - pymdownx.tabbed:       # allow content-tabs
+      alternate_style: true
+  - pymdownx.emoji:        # allow emojis/symbols
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
