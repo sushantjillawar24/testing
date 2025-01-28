@@ -27,9 +27,9 @@ theme:
       toggle:
         name: Switch to light mode
         icon: material/brightness-4
-  icon:
-    repo: fontawesome/brands/github
-    logo: simple/deloitte
+  #icon:
+  #  repo: fontawesome/brands/github
+  #  logo: simple/deloitte
   features:
     - navigation.tabs
     - navigation.indexes
