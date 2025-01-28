@@ -2,8 +2,8 @@
 
 # Basics
 site_name: Consumer Pod Doc
-#site_url: https://pages
-#repo_url:  https://git.
+site_url: https://pages.github.com/sushantjillawar24/testing
+repo_url:  https://github.com/sushantjillawar24/testing
 edit_uri:  edit/main/docs/
 repo_name: testing
 
@@ -141,7 +141,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid    # generate diagrams from code
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          #format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.mark          # format text with ==
   - pymdownx.tilde         # format text with ~~
   - pymdownx.caret         # format text with ^^
@@ -151,9 +151,9 @@ markdown_extensions:
   - pymdownx.magiclink     # automatically creates anchors for hyperlinks
   - pymdownx.tabbed:       # allow content-tabs
       alternate_style: true
-  - pymdownx.emoji:        # allow emojis/symbols
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  #- pymdownx.emoji:        # allow emojis/symbols
+  #    emoji_index: !!python/name:material.extensions.emoji.twemoji
+  #    emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
