@@ -13,8 +13,8 @@ This site covers the documentation of **Consumer Pod**. Please feel free to use 
 <div class="tiles">
   <a href="getting-started" class="tile">
     <h3>Getting Started</h3>
-    <img src="assets/images/hyperion_logo.png">
-    <p>Onboarding and introduction to the Hyperion GSP Platform</p>
+    <img src="assets/images/intro.png">
+    <p>Introduction</p>
   </a>
   <a href="platform" class="tile">
     <h3>Platform</h3>
@@ -29,12 +29,12 @@ This site covers the documentation of **Consumer Pod**. Please feel free to use 
   <a href="platform/cost_optimization/" class="tile">
     <h3>Cost Optimization</h3>
     <img src="assets/images/cost_optimization.png">
-    <p>FinOps hints regarding Cost Optimization for general resources</p>
+    <p>Cost Optimization for general resources</p>
   </a>
   <a href="support" class="tile">
     <h3>DevOps and Support</h3>
     <img src="assets/images/support.png">
-    <p>Get support from our App Enablement and Operations teams</p>
+    <p>Get support from teams</p>
   </a>
   <a href="security-compliance-topics" class="tile">
     <h3>Security and Compliance</h3>
