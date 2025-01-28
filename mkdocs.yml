@@ -30,7 +30,6 @@ theme:
   icon:
     repo: fontawesome/brands/github
     logo: simple/deloitte
-  favicon: assets/logos/favicon.ico
   features:
     - navigation.tabs
     - navigation.indexes
@@ -44,9 +43,9 @@ theme:
 extra_css:
   - assets/stylesheets/extra.css
 
-extra_javascript:
-  - assets/javascripts/tablesort.min.js
-  - assets/javascripts/mkdocs-tablesort.js
+#extra_javascript:
+#  - assets/javascripts/tablesort.min.js
+#  - assets/javascripts/mkdocs-tablesort.js
 
 # Footer Formatting
 extra:

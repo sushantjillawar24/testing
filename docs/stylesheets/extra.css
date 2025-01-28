@@ -1,0 +1,94 @@
+/*****************************************
+   TOC
+ *****************************************/
+
+.toc { /* style of the TOC body */ }
+
+.toc .toctitle { 
+    text-size:   18px;
+    font-weight: bold;
+}
+
+/*****************************************
+   TILES
+ *****************************************/
+
+/* Flexbox container for tiles */
+.tiles {
+    display: flex;
+    flex-flow: row wrap;
+    color: var(--md-primary-fg-color);
+    text-align: center;
+    line-height: normal;
+}
+
+/* Single tile,  which is a-third of the container wide */
+.tiles .tile {
+    height:  290px;
+    width:   calc( (100% / 3) - 10px - 10px );
+    margin:  10px;
+    padding: 10px;
+    border:  1px solid;
+    border-color: var(--md-primary-fg-color--light);
+    transition: transform .2s;
+}
+
+/* Double-wide tile, which is two-thirds of the container wide */
+.tiles .widetile {
+    width: calc( ( (100% / 3) * 2) - 10px - 10px );
+}
+
+/* Do not apply hyperlink-styling */
+a.tile, a.tile:active, a.tile:hover, a.tile:link, a.tile:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* When hovering over the tile, apply a subtle zoom-effect */
+a.tile:hover {
+    transform: scale(1.05);
+    border: 1px solid;
+    border-color: var(--md-accent-fg-color);
+}
+
+/* Alternating background colors for the tiles */
+.tiles a:nth-child(odd) {
+    background-color: var(--md-primary-bg-color);
+}
+
+.tiles a:nth-child(even) {
+    background-color: var(--md-primary-bg-color--light);
+}
+
+/* Heading within a tile */
+.tile h1, .tile h2, .tile h3, .tile h4 {
+    margin: 0.5em 0px;
+	font-weight: bold;
+}
+
+/* Image within a tile */
+.tile img {
+    width:  130px;
+    height: 130px;
+    margin: 10px;
+}
+
+/* Regular paragraph within a tile */
+.tile p {
+    font-size: 15px;
+}
+
+.md-tabs__list {
+    white-space: normal;
+    flex-wrap: wrap;
+}
+
+.md-grid {
+    max-width: 65rem;
+}
+
+/* Center a image */
+.center {
+    display: block;
+    margin: 0 auto;
+}
